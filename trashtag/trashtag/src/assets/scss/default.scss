@@ -1,0 +1,402 @@
+@import "_config.scss";
+@import "trashmap.scss";
+@import "profile.scss";
+
+header {
+  position: relative;
+  display: block;
+  width: 100%;
+  top: 0;
+  background-color: green;
+  color: white;
+  min-height: 80px;
+  z-index: 999;
+
+  .logo-container {
+    position: relative;
+    top: 50%;
+    left: 100px;
+  }
+
+  .logo {
+    border-radius: 50%;
+    width: 64px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  nav, nav ul, nav ul li {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    position: absolute;
+    top: 50%;
+    right: 75px;
+    @include translateY(-50%);
+
+    ul li {
+      list-style-type: none;
+      display: inline-block;
+      vertical-align: middle;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      background-color: transparent;
+      padding-inline-start: 50px;
+
+      &.last {
+        margin: 0;
+      }
+
+      a {
+        line-height: normal;
+        @include transition(250ms ease-in-out);
+
+        &:visited {
+          color: inherit;
+        }
+
+        &:hover {
+          color: $skyBlue;
+        }
+      }
+    }
+  }
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.footer2 {
+  position: relative;
+  width: 100%;
+  background-color: black;
+  min-height: 65px;
+  bottom: 0;
+  text-align: center;
+  line-height: ce;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    @include translateY(-50%);
+  }
+
+  .copyright {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    font-size: 15px;
+    @include translateY(-50%);
+  }
+}
+
+.page-container {
+  width: 100%;
+  min-height: 80vh;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: $white;
+}
+
+.background-lightgray {
+  background-color: $lightGray;
+}
+
+.background-black {
+  background-color: $black;
+}
+
+.full-page {
+  height: 100vh;
+}
+
+.three-four-full-page {
+  height: 75vh;
+}
+
+.button-border-white {
+  border-color: $white;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.submit-button {
+  line-height: 60px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  height: 60px;
+  user-select: none;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button-border-g {
+  border-color: green;
+  color: green;
+
+  &:hover {
+    background-color: green;
+  }
+}
+.button-border-lg {
+  border-color: $lightGreen;
+  color: $lightGreen;
+
+  &:hover {
+    background-color: $lightGreen;
+  }
+}
+
+.button-transparent {
+  background-color: transparent;
+
+  &:hover {
+    color: $black;
+    @include transition(400ms ease-in-out);
+    transition-duration: 250ms;
+  }
+}
+
+.hero {
+  margin-bottom: 50px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-block {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  position: absolute;
+  left: 30%;
+  top: 55%;
+  @include translate(-50%, -50%);
+  height: 50%;
+}
+
+.hero-text {
+  color: $white;
+  line-height: 60px;
+  max-width: 75%;
+  text-align: center;
+  margin: 0 auto 60px auto;
+  font-size: 3.5rem;
+}
+
+.hero-button {
+  width: 200px;
+  margin-right: 10px;
+  margin-bottom: 1em;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.hero-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient($black, $black);
+  width: 100%;
+}
+
+#home-hero-block {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+#home-hero-img {
+  position: absolute;
+  top: 0;
+}
+
+.body-block {
+  width: 70%;
+  left: 15%;
+  position: absolute;
+  height: 100%;
+}
+
+.body-title {
+  font-size: 3.5em;
+  line-height: 3.5em;
+}
+
+.body-text {
+  font-size: 20px;
+  line-height: 2.2em;
+  color: $darkGray;
+}
+
+.border-gray {
+  border: 2px solid gray;
+}
+
+.user-form-container {
+  margin-top: 10%;
+  display: inline-block;
+  width: 500px;
+}
+
+.user-form-header {
+  color: $black;
+}
+
+.user-form {
+  padding: 2em 2em 2em 2em;
+  background: $white;
+}
+
+.user-form-error {
+  width: 100%;
+  background-color: $lightRed;
+  color: $white;
+  font-size: 1.2em;
+  padding: 0.5em 0 0.5em 0;
+}
+
+.user-form-subtext {
+  display: flex;
+  color: blue;
+  font-size: 1em;
+}
+
+.form-page-container {
+  height: 100%;
+  min-height: 100vh;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.form-input {
+  position: relative;
+  width: 80%;
+  margin-bottom: 20px;
+
+  label {
+      color: $black;
+      position: absolute;
+      font-size: 1.5em;
+      left: 5px;
+      top: 5px;
+      transition: all 0.2s ease;
+  }
+}
+
+input {
+  width: 80%;
+}
+
+.form-field, .form-text-area {
+  font-size: 18px;
+  padding: auto 10px;
+  display: block;
+  width: 100%;
+
+  &:focus {
+      border: 1px solid $black;
+  }
+}
+
+.form-text-area {
+  word-wrap: break-word;
+}
+
+.form-submit {
+  width: 150px;
+  height: 60px;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+  outline: none;
+
+  &:hover {
+    color: white;
+    transition: 0.2s ease-in-out;
+  }
+}
+
+.trending-container {
+  margin: 0 auto;
+  width: 75%;
+  padding-bottom: 5%;;
+
+
+  h1 {
+    font-weight: bold;
+    font-size: 3.5em;
+  }
+
+  .trending-heading {
+    margin-bottom: 50px;
+    font-size: 2.5em;
+  }
+
+  .trending-block {
+    margin-bottom: 50px;
+    height: 75vh;
+    text-decoration: none;
+    color: inherit;
+
+    .trending-img {
+      margin: 0 auto;
+      max-height: 75%;
+    }
+  }
+}
+
+.trending-combine-container {
+  margin: 10px auto;
+}
+
+.user-form-section {
+  display: inline;
+}
+
+.square {
+  max-height: 50%;
+  max-width: 50%;
+}
+
+.combiner {
+  position: relative;
+  width: 25%vh;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.scroll-menu-arrow {
+  font-size: 2em;
+  padding: 10px;
+}
